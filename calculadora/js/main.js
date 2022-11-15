@@ -11,35 +11,36 @@ const botones = document.getElementsByClassName('boton');
 
 const operation = [];
 let arrRes = [];
+
 const obtenerValor = (arrayValores) => {
   for (const valor of arrayValores) {
     valor.addEventListener('click', (e) => {
-      let valorElemento = parseInt(e.currentTarget.textContent);
-
-      operation.push(valorElemento);
-      console.log(valorElemento);
-      console.log(operation);
-      arrRes = operation.join('');
+      let valorElemento = e.currentTarget.textContent;
+      incluirEnArray(valorElemento);
       historico.innerHTML = arrRes;
-
-      console.log(parseInt(arrRes));
     });
   }
 };
 
-const obtenerSimbolo = (arraySimbolos) => {
-  for (const simbolo of arraySimbolos) {
-    simbolo.addEventListener('click', (e) => {
-      let valorElemento = e.currentTarget.textContent;
-      operation.push(valorElemento);
-      historico.innerHTML = operation;
-      console.log(valorElemento);
-    });
-  }
+// const obtenerSimbolo = (arraySimbolos) => {
+//   for (const simbolo of arraySimbolos) {
+//     simbolo.addEventListener('click', (e) => {
+//       let valorElemento = e.currentTarget.textContent;
+//       incluirEnArray(valorElemento);
+//       historico.innerHTML = arrRes;
+//     });
+//   }
+// };
+
+const incluirEnArray = (elem) => {
+  operation.push(elem);
+  arrRes = operation.join('');
 };
 
 obtenerValor(botonesValor);
 
-obtenerSimbolo(botonesSimbolo);
+// obtenerSimbolo(botonesSimbolo);
+
+obtenerValor(botonesSimbolo);
 
 console.log(2 + 3);
