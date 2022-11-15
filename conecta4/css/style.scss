@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+//VT323
+//Radio Canada
+// Josefin Sans
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#collapseExample {
+  .card {
+    width: 100%;
+    p {
+      width: 100%;
+    }
+  }
+}
+
+.mainContainer {
+  #infoLateral {
+    display: none;
+  }
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  .conecta4 {
+    width: 100vw;
+    height: 85vh;
+    border-radius: 1em;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .fila {
+      height: 100%;
+      width: 15%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      padding: 0 0 0.2em 0;
+      .moveHere {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border: 1px solid whitesmoke;
+        height: 10%;
+        width: 100%;
+
+        .textContainer {
+          background-color: orange;
+          border-radius: 0.2em;
+          width: 80%;
+          height: 90%;
+
+          p {
+            text-align: center;
+            font-size: 50%;
+          }
+        }
+      }
+      .espacioJuego {
+        background-color: white;
+        border-radius: 50%;
+        width: 95%;
+        height: 14%;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .mainContainer {
+    .conecta4 {
+      background-color: black;
+      width: 80vw;
+      height: 90vh;
+    }
+  }
+}
+@media (min-width: 768px) {
+  body {
+    flex-direction: row;
+  }
+
+  #desplegable {
+    display: none;
+  }
+
+  .mainContainer {
+    #infoLateral {
+      display: block;
+      order: 1;
+      justify-content: flex-start;
+      background-color: red;
+      height: 100%;
+    }
+    .conecta4 {
+      background-color: green;
+      width: 60vw;
+      height: 90vh;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .mainContainer {
+    .conecta4 {
+      background-color: yellow;
+      width: 50vw;
+      height: 90vh;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .mainContainer {
+    .conecta4 {
+      background-color: purple;
+      width: 40vw;
+      height: 90vh;
+    }
+  }
+}
+@media (min-width: 1400px) {
+  .mainContainer {
+    .conecta4 {
+      background-color: purple;
+      max-width: 40vw;
+      max-height: 90vh;
+    }
+  }
+}
