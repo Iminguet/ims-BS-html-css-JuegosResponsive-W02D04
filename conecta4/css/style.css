@@ -23,6 +23,9 @@ body {
           flex-direction: column;
 }
 
+#collapseExample {
+  position: relative;
+}
 #collapseExample .card {
   width: 100%;
 }
@@ -50,7 +53,7 @@ body {
   width: 100vw;
   height: 85vh;
   border-radius: 1em;
-  background-color: blue;
+  background-color: greenyellow;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,26 +63,25 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-.mainContainer .conecta4 .fila {
-  height: 100%;
-  width: 15%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0 0 0.2em 0;
 }
-.mainContainer .conecta4 .fila .moveHere {
+.mainContainer .conecta4 .filaSuperior {
+  height: 10vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.mainContainer .conecta4 .filaSuperior .moveHere {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,24 +93,47 @@ body {
           align-items: center;
   background-color: white;
   border: 1px solid whitesmoke;
-  height: 10%;
+  height: 100%;
   width: 100%;
 }
-.mainContainer .conecta4 .fila .moveHere .textContainer {
+.mainContainer .conecta4 .filaSuperior .moveHere .textContainer {
   background-color: orange;
   border-radius: 0.2em;
-  width: 80%;
-  height: 90%;
+  margin: 0 0.1em;
+  width: 50%;
+  height: 50%;
 }
-.mainContainer .conecta4 .fila .moveHere .textContainer p {
+.mainContainer .conecta4 .filaSuperior .moveHere .textContainer p {
   text-align: center;
   font-size: 50%;
 }
-.mainContainer .conecta4 .fila .espacioJuego {
+.mainContainer .conecta4 .tablonJuego {
+  background-color: blue;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.mainContainer .conecta4 .tablonJuego .fila {
+  height: 100%;
+  width: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.mainContainer .conecta4 .tablonJuego .fila .espacioJuego {
   background-color: white;
   border-radius: 50%;
   width: 95%;
-  height: 14%;
+  height: 10%;
 }
 
 @media (min-width: 576px) {

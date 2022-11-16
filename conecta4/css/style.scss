@@ -18,6 +18,7 @@ body {
 }
 
 #collapseExample {
+  position: relative;
   .card {
     width: 100%;
     p {
@@ -30,6 +31,7 @@ body {
   #infoLateral {
     display: none;
   }
+
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -39,33 +41,33 @@ body {
     width: 100vw;
     height: 85vh;
     border-radius: 1em;
-    background-color: blue;
+    background-color: greenyellow;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 
-    .fila {
-      height: 100%;
-      width: 15%;
+    .filaSuperior {
+      height: 10vh;
+      width: 100%;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      flex-direction: column;
-      padding: 0 0 0.2em 0;
       .moveHere {
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: white;
         border: 1px solid whitesmoke;
-        height: 10%;
+        height: 100%;
         width: 100%;
 
         .textContainer {
           background-color: orange;
           border-radius: 0.2em;
-          width: 80%;
-          height: 90%;
+          margin: 0 0.1em;
+          width: 50%;
+          height: 50%;
 
           p {
             text-align: center;
@@ -73,11 +75,28 @@ body {
           }
         }
       }
-      .espacioJuego {
-        background-color: white;
-        border-radius: 50%;
-        width: 95%;
-        height: 14%;
+    }
+
+    .tablonJuego {
+      background-color: blue;
+      height: 100%;
+      width: 100%;
+      display: flex;
+
+      .fila {
+        height: 100%;
+        width: 15%;
+        display: flex;
+        justify-content: space-evenly;
+
+        flex-direction: column;
+
+        .espacioJuego {
+          background-color: white;
+          border-radius: 50%;
+          width: 95%;
+          height: 10%;
+        }
       }
     }
   }
