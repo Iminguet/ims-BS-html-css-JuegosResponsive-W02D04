@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+//VT323
+//Radio Canada
+// Josefin Sans
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #298584;
+  background: -webkit-linear-gradient(0deg, #298584 0%, #93dcb5 100%);
+  background: linear-gradient(0deg, #298584 0%, #93dcb5 100%);
+}
+
+#desplegable {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  .delimitador {
+    width: 100%;
+    background-color: antiquewhite;
+  }
+  .delimitador :first-child {
+    font-weight: bolder;
+  }
+}
+
+.selected {
+  display: none;
+}
+
+.mainContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  .buscaminas {
+    width: 100vw;
+    height: 100vw;
+    border-radius: 1em;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    .cuadrado {
+      position: relative;
+      width: 10vw;
+      height: 10vw;
+      border: 1px solid rgb(97, 97, 97);
+      background-color: rgb(168, 168, 168);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        font-size: xx-large;
+        font-weight: bold;
+      }
+      img {
+        width: 75%;
+      }
+      .tapa {
+        position: absolute;
+        border-width: 5px;
+        border-style: outset;
+        border-color: rgb(207, 195, 195);
+        border-top-color: white;
+        border-left-color: white;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(190, 189, 189);
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .mainContainer {
+    .buscaminas {
+      width: 80vw;
+      height: 80vw;
+
+      .cuadrado {
+        width: 8vw;
+        height: 8vw;
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  body {
+    flex-direction: row;
+  }
+  #desplegable {
+    order: 1;
+    background-color: rgb(211, 211, 211);
+    height: 100vh;
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .delimitador {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 0.5em 0;
+      padding: 0.5em;
+    }
+  }
+  .mainContainer {
+    align-items: center;
+    justify-content: space-around;
+
+    .buscaminas {
+      width: 70vw;
+      height: 70vw;
+
+      .cuadrado {
+        width: 7vw;
+        height: 7vw;
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .mainContainer {
+    #infoLateral {
+      width: 25vw;
+    }
+    .buscaminas {
+      width: 60vw;
+      height: 60vw;
+      .cuadrado {
+        width: 6vw;
+        height: 6vw;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .mainContainer {
+    #infoLateral {
+      width: 25vw;
+    }
+    .buscaminas {
+      width: 40vw;
+      height: 40vw;
+      .cuadrado {
+        width: 4vw;
+        height: 4vw;
+      }
+    }
+  }
+}
