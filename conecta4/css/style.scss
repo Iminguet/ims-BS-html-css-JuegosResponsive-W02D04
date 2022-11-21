@@ -92,10 +92,9 @@ body {
         flex-direction: column;
 
         .espacioJuego {
-          background-color: white;
           border-radius: 50%;
-          width: 95%;
-          height: 10%;
+          width: 14vw;
+          height: 14vw;
         }
       }
     }
@@ -108,6 +107,15 @@ body {
       background-color: black;
       width: 80vw;
       height: 90vh;
+
+      .tablonJuego {
+        .fila {
+          .espacioJuego {
+            width: 11vw;
+            height: 11vw;
+          }
+        }
+      }
     }
   }
 }
@@ -132,6 +140,14 @@ body {
       background-color: green;
       width: 60vw;
       height: 90vh;
+      .tablonJuego {
+        .fila {
+          .espacioJuego {
+            width: 8vw;
+            height: 8vw;
+          }
+        }
+      }
     }
   }
 }
@@ -141,6 +157,14 @@ body {
       background-color: yellow;
       width: 50vw;
       height: 90vh;
+      .tablonJuego {
+        .fila {
+          .espacioJuego {
+            width: 7vw;
+            height: 7vw;
+          }
+        }
+      }
     }
   }
 }
@@ -150,15 +174,22 @@ body {
       background-color: purple;
       width: 40vw;
       height: 90vh;
+      .tablonJuego {
+        .fila {
+          .espacioJuego {
+            width: 5vw;
+            height: 5vw;
+          }
+        }
+      }
     }
   }
 }
-@media (min-width: 1400px) {
-  .mainContainer {
-    .conecta4 {
-      background-color: purple;
-      max-width: 40vw;
-      max-height: 90vh;
-    }
-  }
+
+.noPlay {
+  background-color: white;
+}
+
+.playedPlayer01 {
+  background-color: red;
 }

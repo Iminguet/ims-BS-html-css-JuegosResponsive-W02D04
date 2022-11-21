@@ -130,10 +130,9 @@ body {
           flex-direction: column;
 }
 .mainContainer .conecta4 .tablonJuego .fila .espacioJuego {
-  background-color: white;
   border-radius: 50%;
-  width: 95%;
-  height: 10%;
+  width: 14vw;
+  height: 14vw;
 }
 
 @media (min-width: 576px) {
@@ -141,6 +140,10 @@ body {
     background-color: black;
     width: 80vw;
     height: 90vh;
+  }
+  .mainContainer .conecta4 .tablonJuego .fila .espacioJuego {
+    width: 11vw;
+    height: 11vw;
   }
 }
 @media (min-width: 768px) {
@@ -169,12 +172,20 @@ body {
     width: 60vw;
     height: 90vh;
   }
+  .mainContainer .conecta4 .tablonJuego .fila .espacioJuego {
+    width: 8vw;
+    height: 8vw;
+  }
 }
 @media (min-width: 992px) {
   .mainContainer .conecta4 {
     background-color: yellow;
     width: 50vw;
     height: 90vh;
+  }
+  .mainContainer .conecta4 .tablonJuego .fila .espacioJuego {
+    width: 7vw;
+    height: 7vw;
   }
 }
 @media (min-width: 1200px) {
@@ -183,11 +194,15 @@ body {
     width: 40vw;
     height: 90vh;
   }
-}
-@media (min-width: 1400px) {
-  .mainContainer .conecta4 {
-    background-color: purple;
-    max-width: 40vw;
-    max-height: 90vh;
+  .mainContainer .conecta4 .tablonJuego .fila .espacioJuego {
+    width: 5vw;
+    height: 5vw;
   }
+}
+.noPlay {
+  background-color: white;
+}
+
+.playedPlayer01 {
+  background-color: red;
 }
