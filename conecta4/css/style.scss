@@ -16,22 +16,20 @@ body {
   align-items: center;
   flex-direction: column;
 }
-
-#collapseExample {
-  position: relative;
-  .card {
+#desplegable {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  .delimitador {
     width: 100%;
-    p {
-      width: 100%;
-    }
+    background-color: antiquewhite;
+  }
+  .delimitador :first-child {
+    font-weight: bolder;
   }
 }
 
 .mainContainer {
-  #infoLateral {
-    display: none;
-  }
-
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -123,19 +121,24 @@ body {
   body {
     flex-direction: row;
   }
-
   #desplegable {
-    display: none;
-  }
-
-  .mainContainer {
-    #infoLateral {
-      display: block;
-      order: 1;
-      justify-content: flex-start;
-      background-color: red;
-      height: 100%;
+    order: 1;
+    background-color: rgb(211, 211, 211);
+    height: 100vh;
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .delimitador {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 0.5em 0;
+      padding: 0.5em;
     }
+  }
+  .mainContainer {
     .conecta4 {
       background-color: green;
       width: 60vw;
