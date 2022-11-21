@@ -17,41 +17,30 @@
   </head>
   <body>
     <div id="desplegable">
-      <p>
-        <button
-          class="btn btn-primary w-100"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapseExample"
-          aria-expanded="false"
-          aria-controls="collapseExample"
-        >
-          Botones pulsados
-        </button>
-      </p>
-      <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-          <p>Selector: <span id="selector"></span></p>
-          <p>Value: <span id="value"></span></p>
-          <p>Tag HTML: <span id="tagHtml"></span></p>
-          <p>Name: <span id="name"></span></p>
-        </div>
+      <div class="delimitador">
+        <p>Selector:</p>
+        <p id="selector"></p>
+      </div>
+      <div class="delimitador">
+        <p>Value:</p>
+        <p id="value"></p>
+      </div>
+      <div class="delimitador">
+        <p>Tag HTML:</p>
+        <p id="tagHtml"></p>
+      </div>
+      <div class="delimitador">
+        <p>Name:</p>
+        <p id="name"></p>
       </div>
     </div>
 
     <div class="mainContainer">
-      <div id="infoLateral">
-        <h1>Botones pulsados</h1>
-        <p>Selector: <span id="selector"></span></p>
-        <p>Value: <span id="value"></span></p>
-        <p>Tag HTML: <span id="tagHtml"></span></p>
-        <p>Name: <span id="name"></span></p>
-      </div>
       <div class="calculadora">
         <div class="pantalla">
-          <div class="historico" id="historico">historico</div>
-          <div class="operacion" id="operacion">operacion</div>
-          <div class="" id="mostrar">resultado</div>
+          <div class="historico" id="historico"></div>
+          <div class="operacion" id="operacion"></div>
+          <div class="" id="mostrar"></div>
         </div>
         <div class="botonera">
           <div class="boton valor" id="boton-1">1</div>
