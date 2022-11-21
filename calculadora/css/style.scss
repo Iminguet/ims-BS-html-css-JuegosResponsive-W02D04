@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+//VT323
+//Radio Canada
+// Josefin Sans
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #298584;
+  background: -webkit-linear-gradient(0deg, #298584 0%, #93dcb5 100%);
+  background: linear-gradient(0deg, #298584 0%, #93dcb5 100%);
+}
+
+#desplegable {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  .delimitador {
+    width: 100%;
+    background-color: antiquewhite;
+  }
+  .delimitador :first-child {
+    font-weight: bolder;
+  }
+}
+
+.mainContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  .calculadora {
+    width: 100vw;
+    height: 85vh;
+    border-radius: 1em;
+    background-color: rgb(20, 26, 26);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .pantalla {
+      background-color: rgb(3, 3, 3);
+      width: 90%;
+      height: 25%;
+      border-radius: 0.5em 0.5em 0 0;
+      text-align: end;
+      color: white;
+      .operacion,
+      .mostrar {
+        height: 45%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      .operacion {
+        justify-content: flex-start;
+      }
+    }
+    .botonera {
+      width: 100%;
+      height: 100%;
+      background-color: blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      .boton {
+        width: 25%;
+        height: 22%;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: xx-large;
+        background-color: rgb(20, 26, 26);
+        color: white;
+      }
+      .simbolo {
+        background-color: rgb(60, 61, 61);
+      }
+      #boton-0,
+      #borrar,
+      #resultado {
+        width: 50%;
+      }
+
+      #borrar {
+        background-color: red;
+      }
+      #resultado {
+        background-color: blue;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .mainContainer {
+    .calculadora {
+      background-color: black;
+      width: 80vw;
+      height: 90vh;
+    }
+  }
+}
+@media (min-width: 768px) {
+  body {
+    flex-direction: row;
+  }
+  #desplegable {
+    order: 1;
+    background-color: rgb(211, 211, 211);
+    height: 100vh;
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .delimitador {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 0.5em 0;
+      padding: 0.5em;
+    }
+  }
+
+  .mainContainer {
+    .calculadora {
+      width: 60vw;
+      height: 90vh;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .mainContainer {
+    .calculadora {
+      width: 50vw;
+      height: 90vh;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .mainContainer {
+    .calculadora {
+      width: 40vw;
+      height: 90vh;
+    }
+  }
+}
+@media (min-width: 1400px) {
+  .mainContainer {
+    .calculadora {
+      max-width: 40vw;
+      max-height: 90vh;
+    }
+  }
+}
