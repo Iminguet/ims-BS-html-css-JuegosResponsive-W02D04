@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#desplegable {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+#desplegable .delimitador {
+  width: 100%;
+  background-color: antiquewhite;
+}
+#desplegable .delimitador :first-child {
+  font-weight: bolder;
+}
+
+.mainContainer {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.mainContainer .conecta4 {
+  width: 100vw;
+  height: 85vh;
+  border-radius: 1em;
+  background-color: greenyellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.mainContainer .conecta4 .filaSuperior {
+  height: 10vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.mainContainer .conecta4 .filaSuperior .moveHere {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border: 1px solid whitesmoke;
+  height: 100%;
+  width: 100%;
+}
+.mainContainer .conecta4 .filaSuperior .moveHere .textContainer {
+  background-color: orange;
+  border-radius: 0.2em;
+  margin: 0 0.1em;
+  width: 50%;
+  height: 50%;
+}
+.mainContainer .conecta4 .filaSuperior .moveHere .textContainer p {
+  text-align: center;
+  font-size: 50%;
+}
+.mainContainer .conecta4 .tablonJuego {
+  background-color: blue;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.mainContainer .conecta4 .tablonJuego .fila {
+  height: 100%;
+  width: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.mainContainer .conecta4 .tablonJuego .fila .espacioJuego {
+  border-radius: 50%;
+  width: 14vw;
+  height: 14vw;
+}
+
+@media (min-width: 576px) {
+  .mainContainer .conecta4 {
+    background-color: black;
+    width: 80vw;
+    height: 90vh;
+  }
+  .mainContainer .conecta4 .tablonJuego .fila .espacioJuego {
+    width: 11vw;
+    height: 11vw;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #desplegable {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    background-color: rgb(211, 211, 211);
+    height: 100vh;
+    width: 40vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #desplegable .delimitador {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0.5em 0;
+    padding: 0.5em;
+  }
+  .mainContainer .conecta4 {
+    background-color: green;
+    width: 60vw;
+    height: 90vh;
+  }
+  .mainContainer .conecta4 .tablonJuego .fila .espacioJuego {
+    width: 8vw;
+    height: 8vw;
+  }
+}
+@media (min-width: 992px) {
+  .mainContainer .conecta4 {
+    background-color: yellow;
+    width: 50vw;
+    height: 90vh;
+  }
+  .mainContainer .conecta4 .tablonJuego .fila .espacioJuego {
+    width: 7vw;
+    height: 7vw;
+  }
+}
+@media (min-width: 1200px) {
+  .mainContainer .conecta4 {
+    background-color: purple;
+    width: 40vw;
+    height: 90vh;
+  }
+  .mainContainer .conecta4 .tablonJuego .fila .espacioJuego {
+    width: 5vw;
+    height: 5vw;
+  }
+}
+.noPlay {
+  background-color: white;
+}
+
+.playedPlayer01 {
+  background-color: red;
+}
