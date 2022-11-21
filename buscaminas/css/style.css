@@ -26,19 +26,26 @@ body {
   background: linear-gradient(0deg, #298584 0%, #93dcb5 100%);
 }
 
-.selected {
-  display: none;
+#desplegable {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+#desplegable .delimitador {
+  width: 100%;
+  background-color: antiquewhite;
+}
+#desplegable .delimitador :first-child {
+  font-weight: bolder;
 }
 
-#collapseExample {
-  position: relative;
-}
-#collapseExample .card {
-  background-color: white;
-  width: 100%;
-}
-#collapseExample .card p {
-  width: 100%;
+.selected {
+  display: none;
 }
 
 .mainContainer {
@@ -53,10 +60,6 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-}
-.mainContainer #infoLateral {
-  background-color: white;
-  display: none;
 }
 .mainContainer .buscaminas {
   width: 100vw;
@@ -125,7 +128,39 @@ body {
             flex-direction: row;
   }
   #desplegable {
-    display: none;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    background-color: rgb(211, 211, 211);
+    height: 100vh;
+    width: 40vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #desplegable .delimitador {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0.5em 0;
+    padding: 0.5em;
   }
   .mainContainer {
     -webkit-box-align: center;
@@ -133,17 +168,6 @@ body {
             align-items: center;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-  }
-  .mainContainer #infoLateral {
-    display: block;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    height: 100%;
-    width: 30vw;
   }
   .mainContainer .buscaminas {
     width: 70vw;

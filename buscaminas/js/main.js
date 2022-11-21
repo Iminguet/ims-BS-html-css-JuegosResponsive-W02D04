@@ -1,42 +1,53 @@
 const selector = document.getElementById('selector');
 const value = document.getElementById('value');
 const tagHtml = document.getElementById('tagHtml');
-const name = document.getElementById('name');
+const nameId = document.getElementById('name');
+const espacioDeJuego = document.getElementsByClassName('cuadrado');
 
-const cuadrados = document.getElementsByClassName('cuadrado');
+const elementoTapa = document.getElementsByClassName('tapa');
 
-// const elementoClickado = document.getElementsByClassName('tapa');
-
-const arrayTapas = [...cuadrados];
-
-// console.log(arrayTapas);
+const arrayElementosJuego = [...espacioDeJuego];
 
 const añadirTapa = (arrayCuadrados) => {
-  // console.log(arrayCuadrados);
   let arrayTapados = [];
+  let id = 0;
+
   arrayTapados = arrayCuadrados.map((cuadrado) => {
-    // console.log(cuadrado, '1');
     const tapa = document.createElement('div');
     tapa.classList.add('tapa');
+    tapa.setAttribute('id', `numero${id}`);
     cuadrado.appendChild(tapa);
+    id++;
+    console.log(tapa);
   });
-  console.log(arrayTapados);
+
   return arrayTapados;
 };
 
-const obtenerValor = (arrayValores) => {
-  console.log(arrayValores);
-  for (const valor of arrayValores) {
-    console.log(valor);
-    valor.addEventListener('click', (event) => {
+const quitarTapa = (arrayTapas) => {
+  for (const tapa of arrayTapas) {
+    tapa.addEventListener('click', (event) => {
       event.preventDefault();
-      selector.innerHTML = valor.classList;
-      value.innerHTML = valor;
-      tagHtml.innerHTML = valor.tagName;
-      // console.table(valor.classList);
-      valor.classList.add('selected');
+      tapa.classList.add('selected');
+      pintarValores(tapa);
     });
   }
 };
+const obtenerValor = (arrayValores) => {
+  console.log(arrayValores);
+  for (const valor of arrayValores) {
+    valor.addEventListener('click', (event) => {
+      event.preventDefault();
+    });
+  }
+};
+const pintarValores = (valor) => {
+  value.innerHTML = valor;
+  tagHtml.innerHTML = valor.tagName;
+  nameId.innerHTML = valor.id;
+  selector.innerHTML = valor.classList;
+};
 
-obtenerValor(añadirTapa(arrayTapas));
+obtenerValor(arrayElementosJuego);
+añadirTapa(arrayElementosJuego);
+quitarTapa(elementoTapa);

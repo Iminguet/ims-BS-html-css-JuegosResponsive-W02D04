@@ -17,36 +17,25 @@
   </head>
   <body>
     <div id="desplegable">
-      <p>
-        <button
-          class="btn btn-primary w-100"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapseExample"
-          aria-expanded="false"
-          aria-controls="collapseExample"
-        >
-          Botones pulsados
-        </button>
-      </p>
-      <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-          <p>Selector: <span id="selector">ddddddddddddd</span></p>
-          <p>Value: <span id="value">dffffffffffffffff</span></p>
-          <p>Tag HTML: <span id="tagHtml">jjjjjjjjjjjj</span></p>
-          <p>Name: <span id="name">lllllllll</span></p>
-        </div>
+      <div class="delimitador">
+        <p>Selector:</p>
+        <p id="selector"></p>
+      </div>
+      <div class="delimitador">
+        <p>Value:</p>
+        <p id="value"></p>
+      </div>
+      <div class="delimitador">
+        <p>Tag HTML:</p>
+        <p id="tagHtml"></p>
+      </div>
+      <div class="delimitador">
+        <p>Name:</p>
+        <p id="name"></p>
       </div>
     </div>
 
     <div class="mainContainer">
-      <div id="infoLateral">
-        <h1>Botones pulsados</h1>
-        <p>Selector: <span id="selector">ddddddddddddd</span></p>
-        <p>Value: <span id="value">dffffffffffffffff</span></p>
-        <p>Tag HTML: <span id="tagHtml">jjjjjjjjjjjj</span></p>
-        <p>Name: <span id="name">lllllllll</span></p>
-      </div>
       <div class="buscaminas">
         <div class="cuadrado">
           <img src="./assets/bomba.png" alt="icono bomba" />
